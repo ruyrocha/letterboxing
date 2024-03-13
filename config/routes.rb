@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :studios
   resources :releases
   resources :languages
   resources :genres
