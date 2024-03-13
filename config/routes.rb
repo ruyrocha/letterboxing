@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :crews
   resources :countries
   resources :actors
   resources :movies
