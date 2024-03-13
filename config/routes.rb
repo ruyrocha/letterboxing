@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :languages
   resources :genres
   resources :crews
   resources :countries
