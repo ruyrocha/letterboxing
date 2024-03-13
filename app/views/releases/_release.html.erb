@@ -1,0 +1,32 @@
+<div id="<%= dom_id release %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Movie:</strong>
+    <%= release.movie_id %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Country:</strong>
+    <%= release.country %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Date:</strong>
+    <%= release.date %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Type:</strong>
+    <%= release.type %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Rating:</strong>
+    <%= release.rating %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this release", release, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to "Edit this release", edit_release_path(release), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

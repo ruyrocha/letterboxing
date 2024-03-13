@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :releases
   resources :languages
   resources :genres
   resources :crews
