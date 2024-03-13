@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class GenresController < ApplicationController
-  before_action :set_genre, only: %i[ show edit update destroy ]
+  before_action :set_genre, only: [:show, :edit, :update, :destroy]
 
   # GET /genres
   def index
-    @genres = Genre.all
+    @genres = Genre.all.limit(300)
   end
 
   # GET /genres/1
@@ -24,35 +26,36 @@ class GenresController < ApplicationController
     @genre = Genre.new(genre_params)
 
     if @genre.save
-      redirect_to @genre, notice: "Genre was successfully created."
+      redirect_to(@genre, notice: "Genre was successfully created.")
     else
-      render :new, status: :unprocessable_entity
+      render(:new, status: :unprocessable_entity)
     end
   end
 
   # PATCH/PUT /genres/1
   def update
     if @genre.update(genre_params)
-      redirect_to @genre, notice: "Genre was successfully updated.", status: :see_other
+      redirect_to(@genre, notice: "Genre was successfully updated.", status: :see_other)
     else
-      render :edit, status: :unprocessable_entity
+      render(:edit, status: :unprocessable_entity)
     end
   end
 
   # DELETE /genres/1
   def destroy
     @genre.destroy!
-    redirect_to genres_url, notice: "Genre was successfully destroyed.", status: :see_other
+    redirect_to(genres_url, notice: "Genre was successfully destroyed.", status: :see_other)
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_genre
-      @genre = Genre.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def genre_params
-      params.require(:genre).permit(:movie_id, :name)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_genre
+    @genre = Genre.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def genre_params
+    params.require(:genre).permit(:movie_id, :name)
+  end
 end
