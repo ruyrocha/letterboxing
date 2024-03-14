@@ -1,24 +1,32 @@
-# README
+# Letterboxing
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Quoting [Letterboxd FAQ section](https://letterboxd.com/about/faq/):
 
-Things you may want to cover:
+> Wikipedia defines letterboxing as the practice of transferring film shot in a widescreen aspect ratio to standard-width video formats while preserving the original aspect ratio. Generally this is accomplished by adding mattes (or ‘black bars’) above and below the picture area. Letterboxd is named for our love of the widescreen format, and has nothing whatsoever to do with orienteering or that thing in Stand By Me. Here’s some history.
 
-* Ruby version
+The project itself has the unique goal of having scaffold for the resources identified below with some data, so you can make your different kinds of experiments.
 
-* System dependencies
+# What About the Numbers?
 
-* Configuration
+Here are the exact numbers after removing just a few invalid IDs from the CSVs:
 
-* Database creation
+| Model    | Totals |
+| -------- | ------ |
+| Actor    | 5_523_326 |
+| Country  | 617_356   |
+| Crew     | 4_393_608 |
+| Genre    | 990_766   |
+| Language | 988_816   |
+| Movie    | 896_382   |
+| Release  | 1_239_150 |
+| Studio   | 642_058   |
+| Theme    | 173_509   |
 
-* Database initialization
+You can find a SQL file containing the dump for the development database in `db/app_development.sql.gz`. Also, all data was taken from [Letterboxd on Kaggle](https://www.kaggle.com/datasets/gsimonx37/letterboxd/).
 
-* How to run the test suite
+Please note you can find records that seem to be invalid as well.
 
-* Services (job queues, cache servers, search engines, etc.)
+# Current Stack
 
-* Deployment instructions
+Built with Ruby 3.2.3, Rails 7.1.3.2, using PostgreSQL 16 as the database (on a rootless container) and TailwindCSS.
 
-* ...
