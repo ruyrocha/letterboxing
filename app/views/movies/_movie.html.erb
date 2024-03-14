@@ -21,7 +21,7 @@
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Duration:</strong>
-    <%= movie.duration %>
+    <%= distance_of_time_in_words(movie.duration.minutes) %>
   </p>
 
   <p class="my-5">
