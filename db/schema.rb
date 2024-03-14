@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_13_172753) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_14_171848) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -41,7 +41,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_13_172753) do
 
   create_table "languages", force: :cascade do |t|
     t.bigint "movie_id", null: false
-    t.string "type"
+    t.string "language_type"
     t.string "name"
     t.index ["movie_id"], name: "index_languages_on_movie_id"
   end
