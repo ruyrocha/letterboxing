@@ -8,7 +8,7 @@ The project itself has the unique goal of having scaffold for the resources iden
 
 # What About the Numbers?
 
-Here are the exact numbers after removing just a few invalid IDs from the CSVs:
+Here are the exact numbers for each model:
 
 | Model    | Totals |
 | -------- | ------ |
@@ -22,9 +22,7 @@ Here are the exact numbers after removing just a few invalid IDs from the CSVs:
 | Studio   | 642_058   |
 | Theme    | 173_509   |
 
-You can find a SQL file containing the dump for the development database in `db/app_development.sql.gz`. Also, all data was taken from [Letterboxd on Kaggle](https://www.kaggle.com/datasets/gsimonx37/letterboxd/).
-
-Please note you can find records that seem to be invalid as well.
+You can download the SQL file for each model from [letterboxd on Kaggle](https://www.kaggle.com/datasets/ruyrocha/letterboxd/data).
 
 # Current Stack
 
